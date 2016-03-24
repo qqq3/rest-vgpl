@@ -1,1 +1,3 @@
 vgpl_api/settings.py
+.idea
+vgpl_api/__pycache__/
