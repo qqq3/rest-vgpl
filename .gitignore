@@ -1,4 +1,4 @@
 vgpl_api/settings.py
 .idea
-vgpl_api/__pycache__/
-news/__pycache__/
+*/__pycache__/
+/__pycache__/
