@@ -4,5 +4,5 @@ from news.models import WpPosts
 
 class NewsSerializer(serializers.ModelSerializer):
     class Meta:
-        models = WpPosts
+        model = WpPosts
         fields = ('id', 'post_title', 'post_content', 'post_date')
