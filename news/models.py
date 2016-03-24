@@ -115,15 +115,6 @@ class DjangoSession(models.Model):
         db_table = 'django_session'
 
 
-class WpCntctfrmField(models.Model):
-    id = models.AutoField(unique=True)
-    name = models.CharField(max_length=100)
-
-    class Meta:
-        managed = False
-        db_table = 'wp_cntctfrm_field'
-
-
 class WpCommentmeta(models.Model):
     meta_id = models.BigIntegerField(primary_key=True)
     comment_id = models.BigIntegerField()
