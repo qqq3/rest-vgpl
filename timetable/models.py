@@ -3,7 +3,7 @@ from django.db import models
 
 class Timetable(models.Model):
     timetable_name = models.CharField(max_length=50)
-    week_day = models.CharField(choices=(('Monday', 'monday'), ('Tuesday', 'tuesday')))
+    week_day = models.CharField(max_length=30, choices=(('Monday', 'monday'), ('Tuesday', 'tuesday')))
 
     def __str__(self):
         return self.timetable_name
