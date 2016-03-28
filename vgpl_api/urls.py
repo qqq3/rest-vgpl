@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    url('$^', RedirectView.as_view(url='http://www.vysokskylycey.by/')),
+    # url('$^', RedirectView.as_view(url='http://www.vysokskylycey.by/')),
     url(r'^admin/', admin.site.urls),
     url(r'^news/', include('news.urls')),
+    url(r'^timetable/', include('timetable.urls')),
 ]
