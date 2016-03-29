@@ -20,4 +20,8 @@ class Timetable(models.Model):
 
 class Lesson(models.Model):
     lesson = models.CharField(max_length=50)
-    timetable = models.ForeignKey(Timetable, on_delete=models.CASCADE)
+    timetable = models.ForeignKey(Timetable, related_name='lessons')
+
+    def __str__(self):
+        return self.lesson
+
