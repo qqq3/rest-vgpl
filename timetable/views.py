@@ -1,13 +1,12 @@
-from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from timetable.serializers import GroupSerializer
-from timetable.models import Groups
+from timetable.serializers import TimetableSerializer
+from timetable.models import Timetable
 
 
-class GroupsList(APIView):
+class TimetableList(APIView):
     def get(self, request):
-        all_groups = Groups.objects.all()
-        serializer = GroupSerializer(all_groups, many=True)
+        all_groups = Timetable.objects.all()
+        serializer = TimetableSerializer(all_groups, many=True)
 
-        return Response(serializer.data)
+        return Response({'result': serializer.data})
