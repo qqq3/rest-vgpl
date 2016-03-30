@@ -7,6 +7,11 @@ class Groups(models.Model):
     def __str__(self):
         return self.group_name
 
+    class Meta:
+        managed = True
+        verbose_name = 'Group'
+        verbose_name_plural = 'Groups'
+
 
 class Timetable(models.Model):
     DAY_CHOICES = (
@@ -23,6 +28,11 @@ class Timetable(models.Model):
 
     def __str__(self):
         return self.timetable_name
+
+    class Meta:
+        managed = True
+        verbose_name = 'Timetable'
+        verbose_name_plural = 'Timetables'
 
 
 class Lesson(models.Model):
