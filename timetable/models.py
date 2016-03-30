@@ -22,7 +22,7 @@ class Timetable(models.Model):
         ('Friday', 'Friday'),
         ('Saturday', 'Saturday'),
     )
-    note = models.CharField(max_length=140, default='', blank=True,)
+    note = models.TextField(max_length=140, default='', blank=True,)
     week_day = models.CharField(max_length=30, choices=DAY_CHOICES)
     group = models.ForeignKey(Groups)
 
