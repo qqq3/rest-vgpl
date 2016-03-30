@@ -9,9 +9,16 @@ class Groups(models.Model):
 
 
 class Timetable(models.Model):
+    DAY_CHOICES = (
+        ('Понедельник', 'Понедельник'),
+        ('Вторник', 'Вторник'),
+        ('Среда', 'Среда'),
+        ('Четрверг', 'Четверг'),
+        ('Пятиница', 'Пятница'),
+        ('Суббота', 'Суббота'),
+    )
     timetable_name = models.CharField(max_length=50)
-    week_day = models.CharField(max_length=30,
-                                choices=(('Monday', 'monday'), ('Tuesday', 'tuesday')))
+    week_day = models.CharField(max_length=30, choices=DAY_CHOICES)
     group = models.ForeignKey(Groups)
 
     def __str__(self):
@@ -24,4 +31,3 @@ class Lesson(models.Model):
 
     def __str__(self):
         return self.lesson
-
