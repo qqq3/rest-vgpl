@@ -15,12 +15,12 @@ class Groups(models.Model):
 
 class Timetable(models.Model):
     DAY_CHOICES = (
-        ('Понедельник', 'Понедельник'),
-        ('Вторник', 'Вторник'),
-        ('Среда', 'Среда'),
-        ('Четрверг', 'Четверг'),
-        ('Пятиница', 'Пятница'),
-        ('Суббота', 'Суббота'),
+        ('Monday', 'Monday'),
+        ('Tuesday', 'Tuesday'),
+        ('Wednesday', 'Wednesday'),
+        ('Thursday', 'Thursday'),
+        ('Friday', 'Friday'),
+        ('Saturday', 'Saturday'),
     )
     timetable_name = models.CharField(max_length=50)
     week_day = models.CharField(max_length=30, choices=DAY_CHOICES)
