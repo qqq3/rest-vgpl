@@ -22,12 +22,9 @@ class Timetable(models.Model):
         ('Friday', 'Friday'),
         ('Saturday', 'Saturday'),
     )
-    note = models.CharField(max_length=140, default='')
+    note = models.CharField(max_length=140, default='', blank=True,)
     week_day = models.CharField(max_length=30, choices=DAY_CHOICES)
     group = models.ForeignKey(Groups)
-
-    def __str__(self):
-        return self.timetable_name
 
     class Meta:
         managed = True
